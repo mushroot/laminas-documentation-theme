@@ -37,19 +37,19 @@ mkdocs["markdown_extensions"] = [
 
 mkdocs["theme"] = {
         "name": None,
-        "custom_dir": "documentation-theme/theme",
+        "custom_dir": "laminas-documentation-theme/theme",
         "static_templates": [
             "pages/404.html"
         ]
     }
 
 mkdocs["extra"]["repo_name"] = mkdocs["repo_url"].replace("https://github.com/", "")
-mkdocs["extra"]["base_url"] = "https://docs.laminas.dev/"
+mkdocs["extra"]["base_url"] = "https://laminas.org.cn/"
 
 if mkdocs["extra"]["project"] == "Components":
-    mkdocs["extra"]["project_url"] = "https://docs.laminas.dev/components/"
+    mkdocs["extra"]["project_url"] = "https://laminas.org.cn/components/"
 elif (mkdocs["extra"]["project"] == "MVC") or (mkdocs["extra"]["project"] == "Mvc"):
-    mkdocs["extra"]["project_url"] = "https://docs.laminas.dev/mvc/"
+    mkdocs["extra"]["project_url"] = "https://laminas.org.cn/mvc/"
 elif mkdocs["extra"]["project"] == "Mezzio":
     mkdocs["extra"]["project_url"] = "https://docs.mezzio.dev/"
 

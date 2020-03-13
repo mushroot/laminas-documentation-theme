@@ -24,16 +24,16 @@ pip install --user pymdown-extensions
 pip install --user markdown-fenced-code-tabs
 
 # Conditionally install documentation-theme.
-if [[ ! -d "laminas-mkdoc-theme/theme" ]];then
+if [[ ! -d "laminas-documentation-theme/theme" ]];then
     echo "Downloading documentation-theme..." ;
-    mkdir -p laminas-mkdoc-theme ;
-    curl -s -L https://github.com/laminas/documentation-theme/releases/latest |
-        egrep -o '/laminas/documentation-theme/archive/[0-9]*\.[0-9]*\.[0-9]*\.tar\.gz' |
+    mkdir -p laminas-documentation-theme ;
+    curl -s -L https://github.com/mushroot/laminas-documentation-theme/releases/latest |
+        egrep -o '/laminas/laminas-documentation-theme/archive/[0-9]*\.[0-9]*\.[0-9]*\.tar\.gz' |
         head -n1 |
-        wget -O documentation-theme.tgz --base=https://github.com/ -i - ;
+        wget -O laminas-documentation-theme.tgz --base=https://github.com/ -i - ;
     (
-        cd laminas-mkdoc-theme ;
-        tar xzf ../documentation-theme.tgz --strip-components=1 ;
+        cd laminas-documentation-theme ;
+        tar xzf ../laminas-documentation-theme.tgz --strip-components=1 ;
     );
     echo "Finished downloading and installing documentation-theme" ;
 fi
